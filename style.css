@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #310e68;
+    background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
+    background-size: 100%;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    background: #dedede;
+    border-radius: 10px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048);
+    overflow: hidden;
+    width: calc(100vw - 65vw);
+    max-width: 100%;
+
+}
+
+.header {
+    padding: 30px 0;
+    background: linear-gradient(to left, #310E68, #5F0F40);
+}
+
+.header h2 {
+
+    color: #fff;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 35px;
+    text-align: center;
+}
+
+.form {
+    padding: 40px;
+}
+
+.form-control {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.form-control label {
+    font-size: 25px;
+    font-weight: 500;
+    color: #310E68;
+    font-family: 'Libre Baskerville', serif;
+    display: inline-block;
+    margin-bottom: 5px;
+
+}
+
+.form-control input {
+    width: 100%;
+    border: 2px solid silver;
+    border-radius: 5px;
+    display: block;
+    font-family: var(--myfont);
+    font-size: 14px;
+    padding: 12px;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control i {
+    position: absolute;
+    right: 12px;
+    top: 50px;
+    visibility: hidden;
+}
+
+
+.form-control.success i.fa-circle-check {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-circle-exclamation {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control small {
+    color: #e74c3c;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form .btn {
+    background: #310e68;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    color: #fff;
+    display: block;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16px;
+    padding: 15px 0;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 1s ease;
+}
+
+.form .btn:hover {
+    background: linear-gradient(to left, #310E68, #5F0F40);
+}
+
+@media(max-width:998px) {
+    .container {
+        width: calc(100vw - 35vw);
+        max-width: 100%;
+    }
+}
+
+
+/* HOME CSS */
+.container2 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container2 h2 {
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+
+.emoji {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: linear-gradient(#ffda6b, #ff935c);
+}
+
+.face {
+    height: 100%;
+    width: 100%;
+    animation: face 3s linear infinite;
+}
+
+.eyebrows {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    animation: eyebrows 3s linear infinite;
+}
+
+.eyebrows span {
+    display: inline-block;
+    margin: 0 12px;
+    width: 53px;
+    height: 50px;
+    border-radius: 50%;
+    border: 8px solid #b96a46;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    position: relative;
+}
+
+.eyebrows span::before,
+.eyebrows span::after {
+    content: '';
+    background: #b96a46;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.eyebrows span::before {
+    left: -2px;
+    top: -1px;
+}
+
+.eyebrows span::after {
+    right: -2px;
+    top: -1px;
+}
+
+.eyes {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+}
+
+.eyes span {
+    display: inline-block;
+    height: 40px;
+    width: 30px;
+    margin: 0 22px;
+    border-radius: 50%;
+    background: #262c38;
+}
+
+.mouth {
+    width: 60px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 30px);
+    background: linear-gradient(#481f00, #b96a46);
+    animation: mouth 3s linear infinite;
+}
+
+@keyframes face {
+
+    15%,
+    25% {
+        transform: rotate(25deg) translateX(-35px);
+    }
+
+    45%,
+    65% {
+        transform: rotate(-25deg) translateX(35px);
+    }
+
+    75%,
+    100% {
+        transform: rotate(0deg) translateX(0px);
+    }
+}
+
+@keyframes eyebrows {
+
+    15%,
+    65% {
+        top: 35px;
+    }
+
+    75%,
+    100% {
+        top: 15px;
+    }
+}
+
+@keyframes mouth {
+
+    10%,
+    30% {
+        width: 34px;
+        height: 34px;
+        left: calc(50% - 17px);
+    }
+
+    50%,
+    70% {
+        width: 64px;
+        height: 74px;
+        left: calc(50% - 30px);
+    }
+
+    75%,
+    100% {
+        height: 80px;
+    }
+
+}
